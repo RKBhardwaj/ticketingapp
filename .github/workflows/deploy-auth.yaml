@@ -12,7 +12,6 @@ jobs:
 		runs-on: ubuntu-latest
 		steps:
 			- uses: actions/checkout@v2
-      # Below code segment is uses to create a docker build and push is the docker hub.
 			- run: cd auth && docker build -t rkbhardwaj88/auth .
 			- run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 				env:
